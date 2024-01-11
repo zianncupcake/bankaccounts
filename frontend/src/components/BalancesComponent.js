@@ -53,6 +53,7 @@ const BalancesComponent = ({getAccounts, deleteAccount}) => {
               <th>Account Type</th>
               <th>Phone Number Linked</th>
               <th>Balance</th>
+              <th>Transfer</th>
               <th>Deposit / Withdraw</th>
               <th>Close Account?</th>
 
@@ -66,6 +67,14 @@ const BalancesComponent = ({getAccounts, deleteAccount}) => {
                 <td>{account.AccountType}</td>
                 <td>{account.LinkPhone}</td>
                 <td style={{ width: '30%' }}>$ {account.StartingBalance}</td>
+                <td>
+                  <LinkContainer to={`/transfer/${account.id}`}>
+                    <Button className="btn-sm" variant="warning">
+                      <i className="bi bi-arrow-left-right"></i>
+                    </Button>
+                  </LinkContainer>
+                </td>
+     
                 <td>
                   <LinkContainer to={`/deposit/${account.id}`}>
                     <Button className="btn-sm" variant="success">

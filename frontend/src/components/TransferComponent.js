@@ -89,10 +89,10 @@ const TransferComponent = ({ transfer, getAccounts, getAccount, createTransactio
     console.log("form input payer", PayerformInputs);
 
     const PayeeformInputs = {
-      AccountType: account.AccountType,
+      AccountType: payeeAccount.AccountType,
       StartingBalance: newBalance2,
-      LinkPhone: account.LinkPhone,
-      UserID: account.UserID,
+      LinkPhone: payeeAccount.LinkPhone,
+      UserID: payeeAccount.UserID,
     };
     console.log("form input payee", PayeeformInputs);
 

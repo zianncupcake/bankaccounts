@@ -18,6 +18,7 @@ import {
   
     //TEMPORARILY BEFORE LOGIN COMPONENT
     const { login,user } = useAuth();
+    const navigate = useNavigate()
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -39,6 +40,7 @@ import {
             console.log("res", res)
             setSuccess(true)
             login(res)
+            navigate(`/balances/${res.id}`)
             console.log("user", user)
           } catch (er) {
             console.log(er)
