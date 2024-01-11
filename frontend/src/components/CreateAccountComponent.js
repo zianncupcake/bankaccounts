@@ -22,7 +22,7 @@ const CreateAccountComponent = ({ createAccount }) => {
 
     const formInputs = {
       AccountType: form.accountType.value,
-      StartingBalance: form.startingBalance.value,
+      StartingBalance: parseInt(form.startingBalance.value),
       LinkPhone: form.linkPhone.value,
       UserID: id,
     };
